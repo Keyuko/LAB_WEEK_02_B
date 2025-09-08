@@ -3,10 +3,10 @@ package com.example.lab_week_02_b
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
-import android.graphics.Color
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import android.app.Activity
+import android.widget.Button
 import androidx.core.graphics.toColorInt
 
 class ResultActivity : AppCompatActivity() {
@@ -36,6 +36,11 @@ class ResultActivity : AppCompatActivity() {
                 findViewById<TextView>(R.id.color_code_result_message)
             resultMessage.text = getString(R.string.color_code_result_message,
                 colorCode?.uppercase())
+        }
+
+        val backButton = findViewById<Button>(R.id.back_button)
+        backButton.setOnClickListener {
+            finish()
         }
     }
 }
